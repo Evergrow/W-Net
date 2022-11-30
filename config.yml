@@ -1,0 +1,29 @@
+SEED: 10            # random seed
+GPU: [7]            # list of gpu ids
+LOAD_MASK: 1        # load mask(1) or randomly create(0)
+
+CHECKPOINTS: ./logs/
+LOAD_MODEL:
+TRAIN_FLIST: ...
+VAL_FLIST: ...
+MASK_FLIST: ...
+VAL_MASK_FLIST: ...
+
+LR: 0.0001                    # learning rate
+D2G_LR: 0.1                   # discriminator/generator learning rate ratio  0.1
+BETA1: 0.0                    # adam optimizer beta1 0.0
+BETA2: 0.9                    # adam optimizer beta2 0.9
+BATCH_SIZE: 4                 # input batch size for training
+VAL_BATCH_SIZE: 4             # input batch size for validation
+BASE_CHANNEL: 64              # the first channel size in generator model
+SAMPLE_NUM: 8                 # down and up sample number in generator model
+INPUT_SIZE: 256               # input image size for training 0 for original size
+EPOCH: 200                    # epoch number to train the model
+
+EXPBASE: 2.72                 # base number of exponential transition
+GAMMA: 2                      # focusing parameter in focal loss
+
+SAVE_INTERVAL: 6750           # how many iterations to wait before saving model (0: never)
+SUMMARY_INTERVAL: 6750        # how many iterations to wait before summary model (0: never)
+SAMPLE_INTERVAL: 1000         # how many iterations to wait before sampling (0: never)
+
